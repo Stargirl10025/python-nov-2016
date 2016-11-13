@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Results</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'surveyinfo/css/survey_show.css' %}"media="screen" title="no title"  charset="utf-8">
+  </head>
+  <body>
+    <div id="container">
+      <p>
+        <h1>Thanks for submitting the form! You have submitted this form {{request.session.numsubmissions}} times now.</h1>
+      </p>
+      <p>
+        <h3>Submitted Information</h3>
+      </p>
+      <p>Name:{{request.session.your_name}}</p>
+      <p>Dojo Location:{{request.session.location}}</p>
+      <p>Favorite Language: {{request.session.language}}</p>
+      <p>Comment: {{request.session.comments}}</p>
+
+      <form  action="/" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Go Back">
+      </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+*{
+  font-family: "Tahoma";
+  margin: 0px;
+  padding: 0px;
+}
+#container{
+  width: 970px;
+  height: 750px;
+  margin: 0px auto;
+}
+  #container h1{
+    border-width: medium;
+    border-style: solid;
+    color: blue;
+    
+  }
